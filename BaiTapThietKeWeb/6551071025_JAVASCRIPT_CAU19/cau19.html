@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cau 19</title>
+    </head>
+    <body>
+        <b>Nhập số tiền gốc:</b>
+        <input type="text" id="goc" size="15"><br>
+        <b>Nhập lãi suất hàng năm (%):</b>
+        <input type="text" id="lai" size="15"><br>
+        <b>Nhập số năm:</b>
+        <input type="text" id="nam" size="15"><br><br>
+        <input type="button" value="Tính tổng tiền" onclick="inKetQua()"><br>
+        <h1>Kết quả: <span id="kq"></span></h1>
+        <script>
+            function tinhLai(goc, lai, nam){
+                var tong = goc * (1 + (lai/100) * nam);
+                tong =(tong * 100) / 100; 
+                return tong;
+            }
+            function inKetQua(){
+                var goc = parseFloat(document.getElementById("goc").value);
+                var lai = parseFloat(document.getElementById("lai").value);
+                var nam = parseFloat(document.getElementById("nam").value);
+                var kq = tinhLai(goc, lai, nam);
+                document.getElementById("kq").innerHTML = kq + " VND";
+            }
+        </script>
+    </body>
+</html>

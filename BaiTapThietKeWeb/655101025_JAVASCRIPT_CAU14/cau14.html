@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 14</title>
+</head>
+<body>
+    <h1>Thông tin Sinh viên</h1>
+    <span id="output"></span>
+
+    <script>
+        function Student(Name, NumberID, Gender){
+            this.Name = Name;
+            this.NumberID = NumberID;
+            this.Gender = Gender;
+        }
+        function inStudent(){
+            var sv = new Student("Dinh Giang", "6551071025", "Nam");
+            document.getElementById("output").innerHTML =
+                "Họ tên: " + sv.Name + "<br>" +
+                "Mã số: " + sv.NumberID + "<br>" +
+                "Giới tính: " + sv.Gender;
+        }
+        inStudent();
+    </script>
+</body>
+</html>

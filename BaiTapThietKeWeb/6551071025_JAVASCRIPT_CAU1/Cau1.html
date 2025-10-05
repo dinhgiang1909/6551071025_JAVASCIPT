@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Câu 1</title>
+    </head>
+    <body>
+        <script>
+            function dienTich(a,b,c){
+                var p = (a + b + c) / 2;
+                var dt = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+                return dt;
+            }
+            var a = 5;
+            var b = 6;
+            var c = 7;
+            var DIENTICH = dienTich(a,b,c);
+            console.log("Diện tích tam giác là: " + DIENTICH.toFixed(2));
+            alert("Diện tích tam giác là: " + DIENTICH.toFixed(2));
+            document.write("Diện tích tam giác là: " + DIENTICH.toFixed(2));
+        </script>
+    </body>
+</html>

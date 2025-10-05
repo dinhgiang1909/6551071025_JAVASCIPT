@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>Cau 21</title>
+    </head>
+    <body>
+        <h1>Kiểm tra thứ của 1 ngày</h1><br>
+        <p>Nhập ngày: <input type="text"  id="x" size="20"></p><br>
+        <p>Nhập tháng: <input type="text"  id="y" size="20"></p><br>
+        <p>Nhập năm<input type="text" id="z" size="20"></p><br>
+        <input type="button" onclick="kiemTraThu()" value="Kiểm tra thứ"><br>
+        <b>Ngày trên là thứ: </b><span id="ngaythu"></span>
+        <script>
+            function kiemTraThu(){
+            var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+            var z = parseInt(document.getElementById("z").value);
+            var ngay = new Date(z,y-1,x);
+            var thu = ["Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];
+            var ngaythu = thu[ngay.getDay()];
+            document.getElementById("ngaythu").innerHTML=ngaythu;
+            }
+        </script>
+    </body>
+</html>

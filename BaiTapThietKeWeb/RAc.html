@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Demo</title>
+</head>
+<body>
+
+    <form name="frm">
+        x = <input type="text" name="expr" size=15>
+        <br>
+        <input type="button" value="Calculate" width="30px" onclick="compute(this.form)">
+        <br>
+        x * x = <span id="result"></span>
+    </form>
+
+    <script>
+        function compute(frm){
+            var x = parseFloat(frm.expr.value);
+            result.innerHTML = x * x;
+        }
+    </script>
+
+</body>
+</html>

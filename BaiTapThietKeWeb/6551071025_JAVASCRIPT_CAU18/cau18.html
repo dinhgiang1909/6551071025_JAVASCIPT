@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cau 18</title>
+    </head>
+    <body>
+        <b>Nhập giai thừa muốn tính</b><br>
+        <input type="text" id="n" size="15"><br>
+        <input type="button" value="Kết quả" onclick="inGiaiThua()"><br>
+        <b>Kết quả: <span id="kq"></span></b> 
+        <script>
+            function giaiThua(n){
+                 if (n === 0 || n === 1) {
+                    return 1;
+                }
+                return n*giaiThua(n-1);
+            }
+            function inGiaiThua(){
+                var m=parseInt(document.getElementById("n").value);
+                var kq=giaiThua(m);
+                document.getElementById("kq").innerHTML=kq;
+            }
+        </script>
+    </body>
+</html>

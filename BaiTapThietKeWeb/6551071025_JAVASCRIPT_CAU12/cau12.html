@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Cau 12</title>
+    </head>
+  <form name="nhap">
+        <h1>Phép toán: </h1>
+        <p>Nhập cơ số: <input type="text" id="coSo" size="15"> </p><br>
+        <p>Nhập số mũ: <input type="text" id="soMu" size="15"> </p><br>
+        <input type="button" value="Kết quả" onclick="inkq()"> <br>
+        <b>Kết quả= <span id="kq"></span> </b>
+    </form>
+    <body>
+        <script>
+            function mu(coSo, soMu){
+                if(coSo<0 || soMu<0){
+                    coSo=Math.abs(coSo);
+                    soMu=Math.abs(soMu);
+                }
+                return Math.pow(coSo, soMu);
+            }
+            function inkq(){
+                var coSo=parseInt(document.getElementById("coSo").value);
+                var soMu=parseInt(document.getElementById("soMu").value);
+                var kq=mu(coSo, soMu);
+                document.getElementById("kq").innerHTML = kq;
+            }
+        </script>
+    </body>
+</html>

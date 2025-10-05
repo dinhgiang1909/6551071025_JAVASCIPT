@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cau 11</title>
+    </head>
+    <body>
+        <form onsubmit="printDaoNguoc(); return false;">
+            <p>Nhap so nguyen: </p>
+            <input type="text" name="soNguyen" id="soNguyen">
+            <input type="submit" value="Dao nguoc">
+        </form>
+        <h1>Kết quả:  <span id="daonguoc"></span></h1>
+
+        <script>
+            function daoNguoc(soNguyen){
+               var dn=0;
+                while(soNguyen!=0){
+                    var temp=soNguyen%10;
+                    dn=dn*10+temp;
+                    soNguyen=Math.floor (soNguyen/10); 
+                }
+                return dn;
+            }
+            function printDaoNguoc(){
+                var so=document.getElementById("soNguyen").value;
+                var soNguyen=parseInt(so);
+                var daonguoc=daoNguoc(soNguyen);
+                document.getElementById("daonguoc").innerHTML=daonguoc;
+            }
+        </script>
+
+    </body>
+</html>

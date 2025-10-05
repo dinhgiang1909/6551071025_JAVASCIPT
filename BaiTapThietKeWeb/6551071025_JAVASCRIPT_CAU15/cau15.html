@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 15</title>
+</head>
+<body>
+    <h1>Thông tin User</h1>
+    <span id="output"></span><br>
+    <span id="output1"></span>
+
+    <script>
+        function User(Name, Age){
+            this.Name = Name;
+            this.Age = Age;
+        }
+        function inUser(){
+            var u = new User("Max", "20");
+            document.getElementById("output").innerHTML =
+                "Thông tin trước khi thay đổi : <br> "+
+                "Tên: " + u.Name + "<br>" +
+                "Tuổi: " + u.Age + "<br>"
+            u.Surname = "Lee";
+            u.Age=30;
+            document.getElementById("output1").innerHTML = 
+                "Thông tin sau khi thay đổi: <br>" +
+                "Họ: " + u.Surname + "<br>" +
+                "Tên: " + u.Name + "<br>" +
+                "Tuổi: " + u.Age + "<br>"
+        }
+        inUser();
+    </script>
+</body>
+</html>

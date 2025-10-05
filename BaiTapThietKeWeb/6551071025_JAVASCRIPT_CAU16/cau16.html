@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 16</title>
+</head>
+<body>
+    <h1>Thông tin Hình Trụ</h1>
+    <span id="output"></span><br>
+    <span id="output1"></span>
+
+    <script>
+        function HinhTru(radius, height) {
+            this.radius=radius;
+            this.height=height;
+            this.theTich=function(){
+                return Math.PI*this.radius*this.radius*this.height;
+            };
+            this.dienTichToanPhan=function(){
+                return 2*Math.PI*this.radius*(this.radius+this.height);
+            };
+        }
+        function inHinhTru(){
+            var hinhTru=new HinhTru(10, 15);
+            var theTich=hinhTru.theTich();
+            document.getElementById("output").innerHTML=
+                "Thông tin ban đầu: <br>" +
+                "Bán kính (radius): " + hinhTru.radius + "<br>" +
+                "Chiều cao (height): " + hinhTru.height + "<br>" +
+                "Thể tích (V): " + theTich;
+            hinhTru.height=30;
+            var dienTichToanPhan=hinhTru.dienTichToanPhan();
+            document.getElementById("output1").innerHTML= 
+                "<br>Thông tin sau khi thay đổi: <br>" +
+                "Bán kính (radius): " + hinhTru.radius + "<br>" +
+                "Chiều cao (height) mới: " + hinhTru.height + "<br>" +
+                "Diện tích toàn phần (Stp): " + dienTichToanPhan ;
+        }
+        inHinhTru();
+    </script>
+</body>
+</html>

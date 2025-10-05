@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cau 6</title>
+    </head>
+    <body>
+        <script>
+            function giaiPhuongTrinhBac2(){
+                var a= parseFloat(prompt("Nhap he so a: "));
+                var b= parseFloat(prompt("Nhap he so b: "));
+                var c= parseFloat(prompt("Nhap he so c: "));
+                var delta = b*b-4*a*c;
+                if(delta>0){
+                    var x1=(-b + Math.sqrt(delta))/(2*a);
+                    var x2=(-b - Math.sqrt(delta))/(2*a);
+                    alert("Phuong trinh co 2 nghiem phan biet: x1= " + x1 + "x2= " + x2);
+                }
+                else if(delta ===0){
+                    var x = -b/(2*a);
+                    alert("Phuong trinh co nghiem kep: x1=x2= " + x);
+                }
+                else{
+                    alert("Phuong trinh khong co nghiem");
+
+                }
+            }
+            giaiPhuongTrinhBac2();
+        </script>
+    </body>
+</html>
